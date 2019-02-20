@@ -14,13 +14,18 @@
     </section>
 
     <p>Enter your first number:
-        
+        <input id = "firstNum" type = "number">
     </p>
 
     <p>Enter your second number:
-
+        <input id = "secNum" type = "number">
     </p>
 
+    <p>
+        <button id = "clicker" class = "btn btn-primary">Click for max value!</button>
+    </p>
+
+    <p id = "result"></p>
 
 
 </body>
@@ -28,7 +33,26 @@
 <script>
     console.log('SCRIPT START')
 
-    console.log('math.max(first, last)')
+    console.log('DECLARE TESTABLE FUNCTIONS..........')
+    function max(x,y){
+        return Math.max(x, y)
+    }
+
+    console.log('DECLARE EVENT LISTENERS..........')
+
+    document.getElementById('clicker').addEventListener('click', function(){
+        const x = parseInt(document.getElementById('firstNum').value)
+        console.log('firstNum = ', x)
+        const y = parseInt(document.getElementById('secNum').value)
+        console.log('secNum = ', y)
+        const ans ='Your largest number is ' + Math.max(x, y)
+        document.getElementById('result').innerHTML = ans
+
+    })
+
+    console.log('SCRIPT END')
+
+
 </script>
 
 </html>
