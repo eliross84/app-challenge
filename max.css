@@ -1,4 +1,11 @@
 h1{
     width: 100%;
     box-align: center;
+    text-align: center;
+}
+
+article {
+    width: 100%;
+    box-align: center;
+    text-align: center;
 }
